@@ -8,17 +8,25 @@ public class Jumper {
     public int jumps(int k, int j) {
 
         int count = 0;
-        int jumpheight = 0;
+        int num = 0;
+        int remaining = 0;
+        if(j<=k){
         for (int x = 0; x <= k; x = x + j) {
             if (x != k) {
                 count++;
+            }}} else if (j>= k) {
+                for (int y=0; y<=k; y++) {
+                    num++;
+                }return num;
             }
-        }
+        return count;
+    }
 
 
-        return count++;
 
-    }}
+
+    }
+
         /*
         while(j<=k){
             j+=j;
