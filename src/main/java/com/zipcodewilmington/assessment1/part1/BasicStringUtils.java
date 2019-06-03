@@ -32,14 +32,14 @@ public class BasicStringUtils {
      * @return string with identical contents, in reverse order, with first character capitalized
      */
     public static String reverseThenCamelCase(String str) {
-        String rev = "";
-        for(int x = str.length()-1; x>=0; x--){
-            rev = rev + str.charAt(x);
+        String s = "";
+        for(int x = str.length()-1; x>=0; x--)
+            s = s + str.charAt(x);
 
-        }
-        rev = rev.substring(0,1).toUpperCase()+rev.substring(1);
 
-        return rev;
+        s = s.substring(0,1).toUpperCase()+s.substring(1);
+
+        return s;
     }
 
 
@@ -57,7 +57,16 @@ public class BasicStringUtils {
      * @return string with identical characters, each with opposite casing
      */
     public static String invertCasing(String str) {
-
-        return null;
+        for (int x=0; x<str.length(); x++){
+            char invert = str.charAt(x);
+            if(Character.isUpperCase(invert)){
+               invert= Character.toLowerCase(invert);
+            } else if (Character.isLowerCase(invert)) {
+             invert =   Character.toUpperCase(invert);
+            }
+        }
+        return str;
     }
+
+
 }
