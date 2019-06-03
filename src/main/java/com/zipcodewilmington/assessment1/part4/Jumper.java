@@ -6,14 +6,20 @@ public class Jumper {
      * Complete the function below.
      */
     public int jumps(int k, int j) {
-        int count =0;
-        int jumpheight =0;
-        for (int x=0; x<=k; x++){
-            if(x != k){
+
+        int count = 0;
+        int jumpheight = 0;
+        for (int x = 0; x <= k; x = x + j) {
+            if (x != k) {
                 count++;
             }
-
         }
+
+
+        return count++;
+
+    }}
+        /*
         while(j<=k){
             j+=j;
             jumpheight++;
@@ -32,8 +38,8 @@ public class Jumper {
     */
 
 
-    }
+   // }
 
 
 
-}
+
