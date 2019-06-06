@@ -6,26 +6,31 @@ public class Jumper {
      * Complete the function below.
      */
     public int jumps(int k, int j) {
-
-        int count = 0;
-        int num = 0;
-        int remaining = 0;
-        if(j<=k){
-        for (int x = 0; x <= k; x = x + j) {
-            if (x != k) {
-                count++;
-            }}} else if (j>= k) {
-                for (int y=0; y<=k; y++) {
-                    num++;
-                }return num;
-            }
-        return count;
-    }
+        int x = k/j;
+        int y= k % j;
+        return  x+y;
 
 
+//
+//        int count = 0;
+//        int num = 0;
+//        int remaining = 0;
+//        if(j<=k){
+//        for (int x = 0; x <= k; x = x + j) {
+//            if (x != k) {
+//                count++;
+//            }}} else if (j>= k) {
+//                for (int y=0; y<=k; y++) {
+//                    num++;
+//                }return num;
+//            }
+//        return count;
+//    }
 
 
-    }
+
+
+    } }
 
         /*
         while(j<=k){

@@ -57,15 +57,29 @@ public class BasicStringUtils {
      * @return string with identical characters, each with opposite casing
      */
     public static String invertCasing(String str) {
-        for (int x=0; x<str.length(); x++){
-            char invert = str.charAt(x);
-            if(Character.isUpperCase(invert)){
-               invert= Character.toLowerCase(invert);
-            } else if (Character.isLowerCase(invert)) {
-             invert =   Character.toUpperCase(invert);
+//        for (int x=0; x<str.length(); x++){
+//            char invert = str.charAt(x);
+//            if(Character.isUpperCase(invert)){
+//               invert= Character.toLowerCase(invert);
+//            } else if (Character.isLowerCase(invert)) {
+//             invert =   Character.toUpperCase(invert);
+//            }
+//        }
+//        return str;
+        char[] chars = str.toCharArray();
+        for (int i = 0; i < chars.length; i++)
+        {
+            char c = chars[i];
+            if (Character.isUpperCase(c))
+            {
+                chars[i] = Character.toLowerCase(c);
+            }
+            else if (Character.isLowerCase(c))
+            {
+                chars[i] = Character.toUpperCase(c);
             }
         }
-        return str;
+        return new String(chars);
     }
 
 
